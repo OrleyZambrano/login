@@ -21,11 +21,8 @@ export function LoginScreen({
 				<View style={styles.logoWrap}>
 					<Image source={REPORT_LOGO} style={styles.logo} resizeMode="contain" />
 				</View>
-				<View style={styles.badge}>
-					<Text style={styles.badgeText}>Ciudad Activa</Text>
-				</View>
-				<Text style={styles.title}>Sistema de Reporte Ciudadano</Text>
-				<Text style={styles.subtitle}>Accede para fotografiar y geolocalizar problemas urbanos.</Text>
+				<Text style={styles.title}>Ciudad Activa</Text>
+				<Text style={styles.subtitle}>Inicia sesion para continuar</Text>
 			</View>
 
 			<AppInput
@@ -56,18 +53,6 @@ export function LoginScreen({
 			<TouchableOpacity onPress={onForgotPassword} style={styles.linkWrap}>
 				<Text style={styles.link}>¿Olvidaste tu contraseña?</Text>
 			</TouchableOpacity>
-
-			<View style={styles.infoRow}>
-				<View style={styles.infoPill}>
-					<Text style={styles.infoPillText}>Foto</Text>
-				</View>
-				<View style={styles.infoPill}>
-					<Text style={styles.infoPillText}>GPS</Text>
-				</View>
-				<View style={styles.infoPill}>
-					<Text style={styles.infoPillText}>Reporte</Text>
-				</View>
-			</View>
 		</View>
 	);
 }
@@ -87,12 +72,12 @@ const styles = StyleSheet.create({
 	},
 	heroArea: {
 		alignItems: 'center',
-		marginBottom: 14,
+		marginBottom: 10,
 	},
 	logoWrap: {
-		width: 148,
-		height: 148,
-		borderRadius: 74,
+		width: 120,
+		height: 120,
+		borderRadius: 60,
 		backgroundColor: '#f8fafc',
 		borderWidth: 1,
 		borderColor: '#cbd5e1',
@@ -104,37 +89,22 @@ const styles = StyleSheet.create({
 		elevation: 4,
 	},
 	logo: {
-		width: 136,
-		height: 136,
-	},
-	badge: {
-		marginTop: 12,
-		backgroundColor: '#ecfeff',
-		borderColor: '#99f6e4',
-		borderWidth: 1,
-		paddingVertical: 4,
-		paddingHorizontal: 10,
-		borderRadius: 999,
-	},
-	badgeText: {
-		color: '#0f766e',
-		fontSize: 12,
-		fontWeight: '800',
-		letterSpacing: 0.5,
+		width: 108,
+		height: 108,
 	},
 	title: {
-		fontSize: 25,
+		fontSize: 22,
 		fontWeight: '900',
 		color: colors.textMain,
-		marginTop: 10,
-		marginBottom: 8,
+		marginTop: 12,
+		marginBottom: 6,
 		textAlign: 'center',
 		letterSpacing: 0.3,
 	},
 	subtitle: {
-		fontSize: 14,
+		fontSize: 13,
 		color: colors.textMuted,
-		marginBottom: 8,
+		marginBottom: 4,
 		textAlign: 'center',
 		lineHeight: 20,
 	},
@@ -156,24 +126,5 @@ const styles = StyleSheet.create({
 	link: {
 		color: colors.primaryDark,
 		fontWeight: '700',
-	},
-	infoRow: {
-		flexDirection: 'row',
-		justifyContent: 'center',
-		marginTop: 14,
-		gap: 8,
-	},
-	infoPill: {
-		backgroundColor: '#f1f5f9',
-		borderColor: '#cbd5e1',
-		borderWidth: 1,
-		paddingVertical: 5,
-		paddingHorizontal: 11,
-		borderRadius: 999,
-	},
-	infoPillText: {
-		color: '#334155',
-		fontWeight: '700',
-		fontSize: 12,
 	},
 });
